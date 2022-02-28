@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- This is the logim redirect url: action="/uploadvideo" -->
+<form action="/login" method="post">
+  
+  {% csrf_token %}
+  <button type="submit">Admin</button>
+</form>
+
+<form action="/" method="post">
+  
+    {% csrf_token %}
+    <button type="submit">Instructor</button>
+  </form>
+
+</body>
+</html>

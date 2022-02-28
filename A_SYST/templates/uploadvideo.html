@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- This is the logim redirect url: action="/uploadvideo" -->
+<form method="post" enctype="multipart/form-data">
+  
+  {% csrf_token %}
+  <input type="file" name="video" id="fileToUpload">
+  <input type="submit" value="Upload file" name="submit">
+</form>
+
+</body>
+</html>
