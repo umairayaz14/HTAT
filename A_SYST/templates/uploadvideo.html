@@ -1,14 +1,72 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
 <body>
 
 <!-- This is the logim redirect url: action="/uploadvideo" -->
-<form method="post" enctype="multipart/form-data">
+
+  <!-- Navigation -->
+  <div class="bg-img">
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand log-align" href="#"><img src="logo-white.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span> <i class="fa fa-bars togg" aria-hidden="true"></i> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto menu-align">
+            <li class="nav-item active">
+              <a class="nav-link white-col" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link white-col" href="https://www.youtube.com/watch?v=x5ndczp_GIY">Get Demo</a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </nav>
+
+      <!--- Welcome Section -->
+      <div class="container-fluid padding">
+        <div class="row padding text-center w-50 mx-auto">
+          <br> <br> <br>
+          <div class="col-xs-12 mx-auto mb-5">
+            <h2 class="white-col">Request a demo tailored to your business!</h2>
+            <p class="white-col"></p>
+            <button class="bt-demo">Get Demo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="col-12 text-center bgg w-75 mx-auto">
+ <form class="" method="post" enctype="multipart/form-data">
   
   {% csrf_token %}
-  <input type="file" name="video" id="fileToUpload">
-  <input type="submit" value="Upload file" name="submit">
+  <input class="" type="file" name="video" id="fileToUpload" multiple>
+  <input class="bt-col" type="submit" value="Upload file" name="submit">
 </form>
+</div>
+
+<div class="text-center mx-auto mt-5">
+  <form class="dec" action="/logoutadmin" method="post">
+    {% csrf_token %}
+    <input class="" type="submit" class="signoutbutton" value="Logout">
+  </form>
+</div>
 
 </body>
 </html>

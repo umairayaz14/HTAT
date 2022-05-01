@@ -1,0 +1,33 @@
+<h1 style="text-align: center;">Instructor Portal</h1>
+<h2 style="text-align: center;">Student Attendance Record</h2>
+
+<table id="table" class="display" style="width: 100%;">
+    <!-- 
+    <thead>
+      <tr>
+        {% for header in headers %}
+        <th>{{ header }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    -->
+    <tbody>
+      <tr>
+        {% for row in data %}
+        <td>{{ row }}</td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+  <form style="text-align: center;" class="" method="post">
+  
+    {% csrf_token %}
+    <label for="classtime">Class (date and time):</label>
+    <br>
+    <input class="" type="datetime-local" name="dt" id="datetimeUpload">
+    <input class="bt-col" type="submit" value="Schedule Time" name="submit">
+  </form>

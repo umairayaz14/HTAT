@@ -1,0 +1,45 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /*background: url(bg.jpg) no-repeat;*/
+  background-color: #26adab;
+  background-size: cover;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.bgc {
+  background-color: white !important;
+}
+
+.signinbutton{
+  width: 50%;
+  background: none;
+  border: 2px solid #4caf50;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+}
+
+.dec {
+  background-color: white;
+}
+
+.marg {
+  margin-top: 1vw !important;
+}
+
+.dec li {
+  list-style: none;
+}
+
+li a:hover {
+  background-color: #21adab;
+
+}

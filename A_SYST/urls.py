@@ -9,8 +9,11 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path("", views.init, name="init"),
     path("uploadvideo", views.uploadvideo, name="uploadvideo"),
-    path("login", auth_views.LoginView.as_view(), name= "login"),
-
+    path("loginadmin", auth_views.LoginView.as_view(), name= "loginadmin"),
+    path("logoutadmin", auth_views.LogoutView.as_view(), name="logoutadmin"),
+    path("logininstructor", auth_views.LoginView.as_view(), name= "logininstructor"),
+    path("logoutinstructor", auth_views.LogoutView.as_view(), name="logoutinstructor"),
+    path("instructor", views.instructor, name="instructor")
 
 ] 
 

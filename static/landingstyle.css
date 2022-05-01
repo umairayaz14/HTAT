@@ -1,0 +1,147 @@
+@charset "utf-8";
+body{
+    background-color: #f6f5f5;
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a{
+    
+    text-decoration: none;
+    margin: 30px;
+    font-family: serif;
+    color: #505050;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.emblem{
+    font-family: 'Times New Roman', Times, serif;
+    color:#000000;
+    font-size: 22px;
+}
+
+
+  .main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .main-container h2 {
+    margin: 0 0 80px 0;
+    color: #21ADAB;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+  }
+
+  .radio-buttons {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .custom-radio input {
+    display: none;
+  }
+
+  .radio-btn {
+    margin: 10px;
+    width: 180px;
+    height: 200px;
+    border: 3px solid transparent;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px #c3c3c367;
+    cursor: pointer;
+  }
+
+  .radio-btn > i {
+    color: #ffffff;
+    background-color: #21ADAB;
+    font-size: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(4);
+    border-radius: 50px;
+    padding: 3px;
+    transition: 0.2s;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .radio-btn .-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .radio-btn .hobbies-icon i {
+    color: #21ADAB;
+    line-height: 80px;
+    font-size: 60px;
+  }
+
+  .radio-btn .hobbies-icon h3 {
+    color: #21ADAB;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .custom-radio input:checked + .radio-btn {
+    border: 3px solid #8373e6;
+  }
+
+  .custom-radio input:checked + .radio-btn > i {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+
+  .input form{
+	width: 380px;
+	max-width: 100%;
+	position: relative;
+}
+
+.input form input{
+	position: absolute;
+	display: inline-block;
+	outline: none;
+	border: none;
+	padding: 10px 25px;
+	border-radius: 30px;
+	background-color: #21ADAB;
+	color: white;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+	top: 55px;
+	right: px; 
+    width: 120px;
+    height: 40px;
+    font-family: calibri;
+    left: 160%;
+    top: 120%;
+}
