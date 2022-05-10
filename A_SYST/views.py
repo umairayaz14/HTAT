@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
-from A_SYST.train import extractFrames
 import csv
+import pandas as pd 
 #from A_SYST import main
 #from A_SYST import train
 
@@ -24,9 +24,14 @@ def instructor(request):
     reader = csv.DictReader(csv_fp)
     headers = [col for col in reader.fieldnames]
     out = [row for row in reader]
+    #data = pd.read_csv(csv_fp)
+   # data_html = data.to_html()
+   # context = {'loaded_data': data_html}
 
     if request.method == 'POST':
         dt= request.POST["dt"]
+        with open(f'/Users/umairayaz/Downloads/Human_Tagging_And_Tracking/HTAT/A_SYST/scheduledtime.txt', 'a') as file:
+         file.write(dt + "\n")
         request.session['value'] = dt
         print(request.session['value'])
     return render(request, 'instructor.html', {'data' : out, 'headers' : headers})

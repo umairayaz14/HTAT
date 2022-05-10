@@ -61,6 +61,7 @@
     <form class="dec" action="/loginadmin" method="post">
       {% csrf_token %}
       {{ form.as_p}}
+      <input type="hidden" name="next" value="{{ next }}">
       <input type="submit" class="signinbutton" value="Sign in">
     </form>
   </div>

@@ -1,8 +1,10 @@
 <h1 style="text-align: center;">Instructor Portal</h1>
 <h2 style="text-align: center;">Student Attendance Record</h2>
-
+<!--
+{{loaded_data | safe}}
+-->
 <table id="table" class="display" style="width: 100%;">
-    <!-- 
+  
     <thead>
       <tr>
         {% for header in headers %}
@@ -10,10 +12,9 @@
         {% endfor %}
       </tr>
     </thead>
-    -->
     <tbody>
       <tr>
-        {% for row in data %}
+        {% for row in data%}
         <td>{{ row }}</td>
         {% endfor %}
       </tr>
