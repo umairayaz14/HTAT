@@ -58,7 +58,12 @@
   {% csrf_token %}
   <input class="" type="file" name="video" id="fileToUpload" multiple>
   <input class="bt-col" type="submit" value="Upload file" name="submit">
-</form>
+ </form>
+ <form action="/trainmodel" method="post">
+    
+     {% csrf_token %}
+     <button type="submit">Re-train</button>
+ </form>
 </div>
 
 <div class="text-center mx-auto mt-5">

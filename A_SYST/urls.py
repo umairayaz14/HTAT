@@ -13,7 +13,8 @@ urlpatterns = [
     path("logoutadmin", auth_views.LogoutView.as_view(), name="logoutadmin"),
     path("logininstructor", auth_views.LoginView.as_view(extra_context={ 'next': '/instructor', },), name= "logininstructor"),
     path("logoutinstructor", auth_views.LogoutView.as_view(), name="logoutinstructor"),
-    path("instructor", views.instructor, name="instructor")
+    path("instructor", views.instructor, name="instructor"),
+    path("trainmodel", views.trainmodel, name="trainmodel"),
 
 ] 
 
